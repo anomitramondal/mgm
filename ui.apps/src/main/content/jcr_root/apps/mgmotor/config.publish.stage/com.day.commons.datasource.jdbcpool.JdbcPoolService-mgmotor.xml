@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jcr:root xmlns:sling="http://sling.apache.org/jcr/sling/1.0" xmlns:jcr="http://www.jcp.org/jcr/1.0"
+    jcr:primaryType="sling:OsgiConfig"
+    datasource.name="mgmpool"
+    default.autocommit="{Boolean}true"
+    jdbc.connection.uri="jdbc:mysql://foxymoron1.cferg3oekgor.ap-southeast-1.rds.amazonaws.com:3307/mgmotor"
+    jdbc.driver.class="com.mysql.cj.jdbc.Driver"
+    jdbc.password="foxymoron1123"
+    jdbc.username="foxymoron1"
+    pool.max.wait.msec="{Long}1000"/>
