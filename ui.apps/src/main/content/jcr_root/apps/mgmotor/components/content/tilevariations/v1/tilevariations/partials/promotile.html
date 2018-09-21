@@ -1,0 +1,19 @@
+<sly data-sly-use.cta="com.mgmotor.core.components.TileVariationComponent"></sly>
+<div class="promo-tile-holder">
+					<div class="top-border ${properties.topbordercolor}">
+					</div>
+					<div class="promo-tile-content">					
+						<div class="description">
+							<p>${properties.title @context='html'}</p>
+						</div>						
+					</div>
+					<sly data-sly-test="${cta.ctaItems}">
+					<sly data-sly-list.link="${cta.ctaItems}">
+
+					<div class="cta-container ${link.alignment}">
+						<a class="" style="color:${properties.bgcolor @context='html'};" href="${link.url}" target="${link.target}">${link.ctatitle}</a>
+					</div>
+					
+					</sly>
+					</sly>
+				</div>

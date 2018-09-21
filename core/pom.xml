@@ -40,7 +40,16 @@
                 <configuration>
                     <instructions>
                         <!-- Import any version of javax.inject, to allow running on multiple versions of AEM -->
-                        <Import-Package>javax.inject;version=0.0.0,*</Import-Package>
+                        <Import-Package>
+							!com.google.protobuf;resolution:=optional,
+							!com.mchange.v2.c3p0;resolution:=optional,
+							!org.jboss.resource.adapter.jdbc;resolution:=optional,
+							!org.jboss.resource.adapter.jdbc.vendor;resolution:=optional,
+							javax.inject;version=0.0.0,*
+						</Import-Package>
+						<Export-Package>
+							com.mysql.cj.*,com.mysql.jdbc.*,com.mgmotor.*
+						</Export-Package>
                         <Bundle-SymbolicName>com.mgmotor.mgmotor</Bundle-SymbolicName>
                         <_plugin>org.apache.sling.bnd.models.ModelsScannerPlugin</_plugin>
                     </instructions>
@@ -96,6 +105,19 @@
             <groupId>org.apache.sling</groupId>
             <artifactId>org.apache.sling.models.api</artifactId>
         </dependency>
+        <dependency>
+			<groupId>com.day.commons</groupId>
+			<artifactId>day.commons.datasource.poolservice</artifactId>
+			<version>1.0.10</version>
+			<scope>provided</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
+		<dependency>
+		    <groupId>mysql</groupId>
+		    <artifactId>mysql-connector-java</artifactId>
+		    <version>8.0.12</version>
+		</dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>

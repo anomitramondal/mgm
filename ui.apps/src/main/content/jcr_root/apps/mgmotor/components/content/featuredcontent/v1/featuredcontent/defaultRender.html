@@ -1,0 +1,80 @@
+<sly data-sly-use.addLinks="com.mgmotor.core.components.FeaturedContentComponent"></sly>
+
+<sly data-sly-use.invocaNumStyle="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-featuredcontent-variation5'}"/>
+<sly data-sly-use.invocaImgStyle="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-featuredcontent-variation6'}"/>
+
+
+<div class="featured-content">
+
+			<div class="featured-content-holder ${properties.invocaBannerAlignment} ${properties.invocabgcolor}">
+
+
+
+
+
+            <sly data-sly-test="${invocaNumStyle.styleIdValid}">
+            	<a class="invoca_num" href="${properties.invocaUrl @context='uri'}" target="${properties.invocaTarget}">
+					<label class="bookmark">${properties.invocaBannerNo}</label>
+				</a>
+			</sly>
+
+            <sly data-sly-test="${invocaImgStyle.styleIdValid}">
+            <sly data-sly-test.url="${properties.invocaUrl}">
+            	<a class="invoca_img" href="${properties.invocaUrl @context='uri'}" target="${properties.invocaTarget}">
+						<img class="bookmark-img" src="${properties.invocaBannerImg @context='uri'}"/>
+				</a>
+            </sly>
+            <sly data-sly-test="${!url}">
+            	<img class="bookmark-img" src="${properties.invocaBannerImg @context='uri'}"/>
+            </sly>
+
+            </sly>
+
+
+					<!--border html-->
+					<sly data-sly-test="${properties.topbordercolor!='select'}">
+					<p class="${properties.topbordercolor}"></p>
+					</sly>
+					
+					<!--image html-->
+					<sly data-sly-test="${properties.fileReference}">
+                    <a href="${properties.imgUrl ? properties.imgUrl : '#'}" target="${properties.imgTarget}">
+					<div class="featured-content-img">
+						<img src="${properties.fileReference}" alt="${properties.imagealttext}" class="img-responsive"/>
+					</div>
+                    </a>
+					</sly>
+					
+					<!--Category html-->
+					<sly data-sly-test="${properties.category}">
+					<div class="featured-content-category">
+						<div class="featured-content-category-title">
+							<a href="${properties.catUrl}" title="${properties.category}" target="${properties.catTarget}">${properties.category}</a>
+						</div>
+					</div>
+					</sly>
+					
+					<!--heading html-->
+					<h2 class="featured-content-header ${properties.headlinebordercolor}"><a href="#">${properties.headline @context='html'}</a></h2>
+					
+					<!--description html-->
+					<div class="featured-content-description">
+						${properties.description @context='html'}
+					</div>
+					
+
+
+
+
+                <!--cta button/normal link this will be a multifield html-->
+					<sly data-sly-test="${addLinks.additionalLinks}">
+					<sly data-sly-list.link="${addLinks.additionalLinks}">
+
+					<div class="cta-container ${link.alignment}">
+						<a class="btn ${link.theme}" href="${link.url}" target="${link.target}">${link.ctatitle}</a>
+					</div>
+
+					</sly>
+					</sly>
+			</div>
+		</div>

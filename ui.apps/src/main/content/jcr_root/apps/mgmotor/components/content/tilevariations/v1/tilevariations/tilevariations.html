@@ -1,0 +1,18 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"/>
+<sly data-sly-call="${template.placeholder @ isEmpty=!properties.title}"></sly>
+
+
+<sly data-sly-use.colorblock="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-tilecmp--colorblock'}"/>
+<sly data-sly-use.promotile="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-tilecmp--promo'}"/>
+
+<sly data-sly-test="${colorblock.styleClasses && !colorblock.styleIdValid && !promotile.styleIdValid && (wcmmode.edit || wcmmode.design)}">
+<div class="help-div text-center">
+<p><i class="glyphicon glyphicon-warning-sign"></i>Tile Variation - Please select one Rendition Item from Style System</p>
+</div>
+</sly>
+
+<sly data-sly-test="${!colorblock.styleClasses || colorblock.styleIdValid}" data-sly-include="partials/colorblock.html">
+</sly>
+
+<sly data-sly-test="${promotile.styleIdValid}" data-sly-include="partials/promotile.html">
+</sly>

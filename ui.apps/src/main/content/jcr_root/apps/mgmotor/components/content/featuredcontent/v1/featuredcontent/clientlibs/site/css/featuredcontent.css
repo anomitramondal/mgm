@@ -1,0 +1,127 @@
+.featuredcontent {
+    height: 100%;
+	position: relative;
+    border-radius: 0 0 4px 4px;
+    box-shadow: 0px 2px 12px rgba(0, 0, 0, 0.4);
+    background:#fff;
+}
+.featured-content-category {
+    padding: 10px 20px 0 20px;
+    font-weight: bold;
+}
+.featured-content-header {
+    padding: 0 20px;
+    font-size: 28px;
+    margin: 10px auto;
+}
+.featured-content-description {
+    padding: 0 20px 20px 20px;
+}
+.cta-container {
+    padding: 0 20px 20px 20px;
+}
+
+
+.border-color-blue {
+    border: 5px solid #003873;
+    margin: 0 auto;
+}
+.border-color-black {
+    border: 5px solid #666;
+    margin: 0 auto;
+}
+.border-color-orange {
+    border: 5px solid #c94c06;
+    margin: 0 auto;
+}
+.border-color-green {
+    border: 5px solid #8FBC8F;
+    margin: 0 auto;
+}
+.border-color-pink {
+    border: 5px solid #FFC0CB;
+    margin: 0 auto;
+}
+.border-color-yellow {
+    border: 5px solid #FFD700;
+    margin: 0 auto;
+}
+.border-color-skyblue {
+    border: 5px solid #ADD8E6;
+    margin: 0 auto;
+}       
+
+
+.cta-button-primary {
+    background-color: #c94c06;
+    color: #fff;
+}
+.cta-button-primary:hover, .cta-button-primary:focus{
+    background-color: #963F04;
+    color: #fff;
+}
+.cta-button-secondary{
+    background-color: #003b71;
+    color: #fff;
+}
+.cta-button-secondary:hover, .cta-button-secondary:focus{
+    background-color: #021e30;
+    color: #fff;
+}
+.cta-button-tertiary {
+    background-color: #fff;
+    color: #003b71;
+    border: 1px solid #e5e5e5;
+}
+.cta-button-tertiary:hover,  .cta-button-tertiary:focus{
+    color: #c94c06;
+}
+
+.text-color-skyblue a{
+	color: #ADD8E6;
+}
+.text-color-yellow a{
+	color: #FFD700;
+}
+.text-color-grey a{
+	color: #666666;
+}
+.text-color-blue a{
+	color: #003873;
+}
+    .text-color-pink a{
+	color: #e20681;
+}
+.text-color-orange {
+	color: #c94c06;
+}
+.text-color-green a{
+	color: #8FBC8F;
+}
+
+
+
+
+<!-- New css added here -->
+
+
+
+
+
+
+
+.bookmark-img {
+    max-width: 100%;
+    display: inline;
+    width: 32px;
+}
+.invocaBanner_right .bookmark-img {
+    position: absolute;
+    top: 13px;
+    right: 7px;
+}
+.invocaBanner_left .bookmark-img {
+    position: absolute;
+    top: 13px;
+    left: 7px;
+}

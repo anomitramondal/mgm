@@ -128,6 +128,65 @@
                     </mgmotor-page>
                 </page>
             </structure>
+            <content jcr:primaryType="nt:unstructured">
+                <responsivecontainer jcr:primaryType="nt:unstructured">
+                    <v1 jcr:primaryType="nt:unstructured">
+                        <responsivecontainer jcr:primaryType="nt:unstructured">
+                            <policy_1537382260123
+                                jcr:lastModified="{Date}2018-09-20T00:10:31.180+05:30"
+                                jcr:lastModifiedBy="admin"
+                                jcr:primaryType="nt:unstructured"
+                                jcr:title="MGM Responsive Grid Policy"
+                                sling:resourceType="wcm/core/components/policy/policy">
+                                <jcr:content jcr:primaryType="nt:unstructured"/>
+                                <cq:styleGroups jcr:primaryType="nt:unstructured">
+                                    <item0
+                                        cq:styleGroupLabel="Layout Options"
+                                        jcr:primaryType="nt:unstructured">
+                                        <cq:styles jcr:primaryType="nt:unstructured">
+                                            <item0
+                                                cq:styleClasses="cmp-responsivecontainer--twocols"
+                                                cq:styleId="1537382286928"
+                                                cq:styleLabel="Two Column"
+                                                jcr:primaryType="nt:unstructured"/>
+                                            <item1
+                                                cq:styleClasses="cmp-responsivecontainer--twocolsleft"
+                                                cq:styleId="1537382308921"
+                                                cq:styleLabel="Two Column Left"
+                                                jcr:primaryType="nt:unstructured"/>
+                                            <item2
+                                                cq:styleClasses="cmp-responsivecontainer--threecols"
+                                                cq:styleId="1537382324009"
+                                                cq:styleLabel="Three Column"
+                                                jcr:primaryType="nt:unstructured"/>
+                                            <item3
+                                                cq:styleClasses="cmp-responsivecontainer--fourcols"
+                                                cq:styleId="1537382328563"
+                                                cq:styleLabel="Four Column"
+                                                jcr:primaryType="nt:unstructured"/>
+                                            <item4
+                                                cq:styleClasses="cmp-responsivecontainer--sixcols"
+                                                cq:styleId="1537382333966"
+                                                cq:styleLabel="Six Column"
+                                                jcr:primaryType="nt:unstructured"/>
+                                            <item5
+                                                cq:styleClasses="cmp-responsivecontainer--leftrail"
+                                                cq:styleId="1537382338543"
+                                                cq:styleLabel="Left Rail"
+                                                jcr:primaryType="nt:unstructured"/>
+                                            <item6
+                                                cq:styleClasses="cmp-responsivecontainer--rightrail"
+                                                cq:styleId="1537382343543"
+                                                cq:styleLabel="Right Rail"
+                                                jcr:primaryType="nt:unstructured"/>
+                                        </cq:styles>
+                                    </item0>
+                                </cq:styleGroups>
+                            </policy_1537382260123>
+                        </responsivecontainer>
+                    </v1>
+                </responsivecontainer>
+            </content>
         </components>
     </mgmotor>
 </jcr:root>

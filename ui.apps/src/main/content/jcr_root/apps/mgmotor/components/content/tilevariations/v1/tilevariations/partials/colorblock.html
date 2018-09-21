@@ -1,0 +1,25 @@
+<sly data-sly-use.cta="com.mgmotor.core.components.TileVariationComponent"></sly>
+
+			<!-- color-block start -->
+				<div class="color-block-holder visitor-info-box ${properties.fontTheme}" 
+                data-sly-attribute.bgcolor="${properties.bgcolor @context='html'}" 
+                data-sly-attribute.bgimage="${properties.bgImage @context='uri'}" 
+                style="background-image : url(${properties.bgImage @context='uri'});background-color:${properties.bgcolor @context='html'};">
+					<div class="info-icon ${properties.glymphAlignment}"><img src="${properties.glymphImage @context='uri'}"/></div>
+					<div class="color-block-content">
+						<h4>${properties.title @context='html'}</h4>
+						<div class="description">
+							<p>${properties.description @context='html'}</p>
+						</div>						
+					</div>
+					<sly data-sly-test="${cta.ctaItems}">
+					<sly data-sly-list.link="${cta.ctaItems}">
+
+					<div class="cta-container ${link.alignment}">
+						<a class="btn ${link.ctaFontTheme}" style="color:${properties.bgcolor @context='html'};background-color:${link.theme @context='html'};" href="${link.url}" target="${link.target}">${link.ctatitle}</a>
+					</div>
+
+					</sly>
+					</sly>
+				</div>
+			<!-- color-block End -->

@@ -1,0 +1,38 @@
+<sly data-sly-use.template="core/wcm/components/commons/v1/templates.html"/>
+<sly data-sly-call="${template.placeholder @ isEmpty='true', classAppend='cmp-responsivecontainer-emptyText', emptyTextAppend='Please Configure from Style System'}"></sly>
+
+
+<sly data-sly-use.twocol="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-responsivecontainer--twocols'}"/>
+<sly data-sly-use.threecol="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-responsivecontainer--threecols'}"/>
+<sly data-sly-use.fourcol="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-responsivecontainer--fourcols'}"/>
+<sly data-sly-use.sixcol="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-responsivecontainer--sixcols'}"/>
+<sly data-sly-use.leftrail="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-responsivecontainer--leftrail'}"/>
+<sly data-sly-use.rightrail="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-responsivecontainer--rightrail'}"/>
+<sly data-sly-use.twocolleft="${'com.mgmotor.core.models.ComponentStyleHelper' @styleIdParam='cmp-responsivecontainer--twocolsleft'}"/>
+
+<div class="container-fluid panel-wrapper">
+<div class="row panel-flex">
+    <sly data-sly-test="${!sixcol.styleClasses || sixcol.isStyleIdValid}">
+    	<sly data-sly-include="partials/sixcolumnlayout.html"/>
+    </sly>
+    <sly data-sly-test="${fourcol.isStyleIdValid}">
+    	<sly data-sly-include="partials/fourcolumnlayout.html"/>
+    </sly>
+    <sly data-sly-test="${twocol.isStyleIdValid}">
+    	<sly data-sly-include="partials/twocolumnlayout.html"/>
+    </sly>
+    <sly data-sly-test="${threecol.isStyleIdValid}">
+    	<sly data-sly-include="partials/threecolumnlayout.html"/>
+    </sly>
+    <sly data-sly-test="${leftrail.isStyleIdValid}">
+    	<sly data-sly-include="partials/leftrail.html"/>
+    </sly>
+    <sly data-sly-test="${rightrail.isStyleIdValid}">
+    	<sly data-sly-include="partials/rightrail.html"/>
+    </sly>
+    <sly data-sly-test="${twocolleft.isStyleIdValid}">
+    	<sly data-sly-include="partials/twocolumnleftlayout.html"/>
+    </sly>
+
+</div>
+</div>

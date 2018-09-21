@@ -1,0 +1,25 @@
+<div data-sly-test="${!properties.style && (wcmmode.edit || wcmmode.design)}" >Configure Image Text Component</div>
+
+
+<!--/*Image Text Style */-->
+<div data-sly-test="${properties.style == 'imagetext'}" >
+	<div class="cmp-imagetext">
+		<div data-sly-test="${properties.title}" data-sly-unwrap>
+			<h2>${properties.title @context='html'}</h2>
+		</div>
+		<div data-sly-test="${properties.fileReference}" data-sly-unwrap>
+			<div class="cmp-imagetext__image">
+			
+                <div data-sly-test="${properties.target == '_self' || properties.target == '_blank'}">
+					<a href="${genericUtil.linkURL}" target="${properties.target}"><img class="img-responsive" src="${properties.fileReference}" alt="${properties.alttext}"></a>
+				</div>
+
+
+			</div>
+		</div>
+		<div data-sly-test="${properties.textcontent}" data-sly-unwrap>
+			<div class="cmp-imagetext__text">${properties.textcontent @context='html'}</div>
+		</div>
+		<div style="clear: both;">&nbsp;</div>
+	</div>
+</div>
